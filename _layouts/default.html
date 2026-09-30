@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'en' }}"{% if page.lang == 'ar' %} dir="rtl"{% endif %}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>{{ page.title }} | Little Blooms</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; line-height: 1.65; color: #193232; background: #f8fbf8; }
+    body { margin: 0; }
+    header, main, footer { max-width: 780px; margin: auto; padding: 1rem 1.5rem; }
+    header { border-bottom: 1px solid #d5e3df; }
+    nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+    a { color: #14635b; }
+    main { background: white; min-height: 60vh; }
+    h1, h2 { line-height: 1.25; }
+    h2 { margin-top: 2rem; }
+    li { margin-bottom: .4rem; }
+    footer { border-top: 1px solid #d5e3df; font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <strong><a href="{{ '/' | relative_url }}">Little Blooms</a></strong>
+    <nav aria-label="Legal pages">
+      <a href="{{ '/privacy.html' | relative_url }}">Privacy</a>
+      <a href="{{ '/terms.html' | relative_url }}">Terms</a>
+      <a href="{{ '/support.html' | relative_url }}">Support &amp; deletion</a>
+      <a href="{{ '/ar/privacy.html' | relative_url }}" lang="ar">العربية</a>
+    </nav>
+  </header>
+  <main>{{ content }}</main>
+  <footer>Little Blooms · Jewar Compound, Sheikh Zayed, Egypt · <a href="mailto:littleblooms30@gmail.com">littleblooms30@gmail.com</a></footer>
+</body>
+</html>
