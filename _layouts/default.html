@@ -23,10 +23,17 @@
   <header>
     <strong><a href="{{ '/' | relative_url }}">Little Blooms</a></strong>
     <nav aria-label="Legal pages">
+      {% if page.lang == 'ar' %}
+      <a href="{{ '/ar/privacy.html' | relative_url }}">الخصوصية</a>
+      <a href="{{ '/ar/terms.html' | relative_url }}">الشروط</a>
+      <a href="{{ '/ar/support.html' | relative_url }}">الدعم وحذف الحساب</a>
+      <a href="{{ '/privacy.html' | relative_url }}" lang="en">English</a>
+      {% else %}
       <a href="{{ '/privacy.html' | relative_url }}">Privacy</a>
       <a href="{{ '/terms.html' | relative_url }}">Terms</a>
       <a href="{{ '/support.html' | relative_url }}">Support &amp; deletion</a>
       <a href="{{ '/ar/privacy.html' | relative_url }}" lang="ar">العربية</a>
+      {% endif %}
     </nav>
   </header>
   <main>{{ content }}</main>
